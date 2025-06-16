@@ -15,6 +15,11 @@
     "dev": "vitepress dev examples",
     "build:doc": "vitepress build examples"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/admin8756/vitepress-ext.git"
+  },
+  "homepage": "https://vitepress-ext.leelaa.cn/",
   "keywords": [
     "leelaa",
     "vitepress",
