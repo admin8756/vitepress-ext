@@ -1,0 +1,59 @@
+{
+  "name": "@leelaa/vitepress-plugin-extended",
+  "version": "1.0.3",
+  "description": "VitePress 增强插件集合，提供多种高级功能和组件",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "author": "Leelaa <leedaisen@hotmail.com>",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "vitepress dev examples",
+    "build:doc": "vitepress build examples"
+  },
+  "keywords": [
+    "leelaa",
+    "vitepress",
+    "plugin",
+    "bbcode",
+    "blog",
+    "markdown",
+    "mind-map",
+    "mermaid",
+    "3d",
+    "glb",
+    "image-preview",
+    "tts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^7.9.0",
+    "mermaid": "^10.9.3",
+    "three": "^0.177.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/inquirer": "^9.0.8",
+    "@types/markdown-it": "^14.1.2",
+    "@types/three": "^0.177.0",
+    "rollup": "^4.43.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "inquirer": "^9.3.7",
+    "@rollup/plugin-commonjs": "^28.0.5",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "typescript": "^5.8.3",
+    "vitepress": "2.0.0-alpha.6",
+    "vue": "^3.5.16"
+  },
+  "peerDependencies": {
+    "vitepress": "^1.2.0",
+    "vue": "^3.4.0"
+  }
+}
