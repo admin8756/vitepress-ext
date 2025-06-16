@@ -13,7 +13,7 @@ hero:
       link: /BBCode
     - theme: alt
       text: 在GitHub上
-      link: https://github.com/admin8756/vitepress-plugin-extended
+      link: https://github.com/admin8756/vitepress-ext
     - theme: alt
       text: 在npm上
       link: https://www.npmjs.com/package/@leelaa/vitepress-plugin-extended
