@@ -4,8 +4,6 @@
 
 github地址：https://github.com/admin8756/vitepress-ext
 
-npm地址：https://www.npmjs.com/package/@leelaa/vitepress-plugin-extended
-
 ## BBCode
 让你的md支持BBCode语法
 
@@ -23,3 +21,9 @@ npm地址：https://www.npmjs.com/package/@leelaa/vitepress-plugin-extended
 
 ## AudioPlayer
 支持博客文章自动朗读
+
+## 参与贡献
+请查看 [贡献指南](./CONTRIBUTING.md)
+
+## 部署说明
+查看 [部署文档](./DEPLOY.md)
