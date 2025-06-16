@@ -1,6 +1,6 @@
 {
   "name": "@leelaa/vitepress-plugin-extended",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "VitePress 增强插件集合，提供多种高级功能和组件",
   "main": "dist/index.js",
   "module": "dist/index.js",
