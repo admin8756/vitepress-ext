@@ -38,11 +38,6 @@ export default defineConfig({
   output: {
     dir: "dist",
     format: "esm",
-    entryFileNames: (chunk) => {
-      return chunk.name === "index"
-        ? "[name].mjs"
-        : `components/${chunk.name}.mjs`;
-    },
     sourcemap: true,
   },
   plugins: [

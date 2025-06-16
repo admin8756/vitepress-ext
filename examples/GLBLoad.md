@@ -30,32 +30,6 @@ const enableZoom = ref(false)
 
 一个功能强大的 Vue 组件，用于在 Web 端展示和交互 3D 模型。支持 GLB/GLTF 格式，提供完整的交互控制和专业的渲染效果。
 
-## 📦 安装使用
-
-
-### 单个引入
-在你要使用的页面中引入组件
-``` md
-<script setup>
-    import { defineClientComponent } from 'vitepress'
-    import { GLBLoad } from '@leelaa/vitepress-plugin-extended'
-    const GLBLoad = defineClientComponent(() => GLBLoad)
-</script>
-```
-
-### 全局引入
-在你的`.vitepress/theme/index.ts`中引入组件
-``` js
-import { defineAsyncComponent, h } from 'vue';
-import DefaultTheme from 'vitepress/theme';
-import { GLBLoad } from '@leelaa/vitepress-plugin-extended'
-export default {
-    enhanceApp({ app }) {
-         app.component('GLBLoad', GLBLoad)
-    }
-}
-```
-
 ## ✨ 主要特性
 
 - **📦 格式支持**: 完美支持 GLB/GLTF 格式的 3D 模型
@@ -71,6 +45,35 @@ export default {
 - **📐 智能适配**: 自动适配模型大小和居中显示
 - **🔧 状态管理**: 完整的加载、错误、空状态处理
 - **⚡ 性能优化**: Three.js 动态加载，内存管理优化
+
+## 📦 安装使用
+
+### 单个引入
+
+在你要使用的页面中引入组件
+
+```md
+<script setup>
+    import { defineClientComponent } from 'vitepress'
+    import { GLBLoad } from '@leelaa/vitepress-plugin-extended'
+    const GLBLoad = defineClientComponent(() => GLBLoad)
+</script>
+```
+
+### 全局引入
+
+在你的`.vitepress/theme/index.ts`中引入组件
+
+```js
+import { defineAsyncComponent, h } from "vue";
+import DefaultTheme from "vitepress/theme";
+import { GLBLoad } from "@leelaa/vitepress-plugin-extended";
+export default {
+  enhanceApp({ app }) {
+    app.component("GLBLoad", GLBLoad);
+  },
+};
+```
 
 ### 基本使用
 

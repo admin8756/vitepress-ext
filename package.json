@@ -1,14 +1,14 @@
 {
   "name": "@leelaa/vitepress-plugin-extended",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "VitePress 增强插件集合，提供多种高级功能和组件",
-  "main": "dist/index.js",
+  "main": "dist/index.mjs",
   "module": "dist/index.js",
   "type": "module",
   "author": "Leelaa <leedaisen@hotmail.com>",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/"
   ],
   "scripts": {
     "build": "rollup -c",
