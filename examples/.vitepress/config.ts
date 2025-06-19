@@ -3,7 +3,7 @@ import {
   BBCodePlugin,
   MarkMapPlugin,
   MermaidPlugin,
-} from "../../dist/index.mjs";
+} from "../../dist/index.js";
 export default defineConfig({
   title: "VitePress Plugin Ext",
   description: "强大的VitePress增强插件集合",

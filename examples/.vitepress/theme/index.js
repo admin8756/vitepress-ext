@@ -7,7 +7,7 @@ import {
   GLBLoad,
   BBCode,
   ToSpeech
-} from "../../../dist/index.mjs";
+} from "../../../dist/index.js";
 
 export default {
   extends: DefaultTheme,
