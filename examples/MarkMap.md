@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 图片预览组件
+title: 思维导图组件
 editLink: false
 ---
 

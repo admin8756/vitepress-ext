@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: 图片预览组件
+title: Mermaid 图表
 editLink: false
 ---
 # Mermaid 图表组件示例
 
-Mermaid 图表组件提供创建和显示 Mermaid 图表的功能，包括预览和编辑两种模式。
+Mermaid 图表组件提供创建和显示 Mermaid 图表的功能，包括预览和查看代码两种模式。
 
 ## ✨ 特性
 
@@ -23,7 +23,7 @@ Mermaid 图表组件提供创建和显示 Mermaid 图表的功能，包括预览
 
 | 参数名    | 类型                  | 默认值    | 描述                       |
 | --------- | --------------------- | --------- | -------------------------- |
-| `content` | `string`              | `""`      | 输入的 BBCode 内容         |
+| `content` | `string`              | `""`      | 输入的 Mermaid 内容         |
 | `theme`   | `"light"` \| `"dark"` | `"light"` | 主题风格（未来可扩展样式） |
 | `height`  | `string`              | `"600px"` | 组件高度                   |
 
