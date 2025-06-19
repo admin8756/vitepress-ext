@@ -52,8 +52,8 @@ export default defineConfig({
     [
       "link",
       {
-        rel: "stylesheet",
-        href: "https://cdn.jsdelivr.net/npm/vue3-photo-preview@0.3.0/dist/index.css",
+        rel: "icon",
+        href: "https://vitepress-ext.leelaa.cn/vitepress-logo-mini.png",
       },
     ],
   ],
