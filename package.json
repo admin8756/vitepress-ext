@@ -1,6 +1,6 @@
 {
   "name": "@leelaa/vitepress-plugin-extended",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "VitePress 增强插件集合，提供多种高级功能和组件",
   "main": "dist/index.mjs",
   "module": "dist/index.js",
@@ -14,6 +14,9 @@
     "build": "rollup -c",
     "dev": "vitepress dev examples",
     "build:doc": "vitepress build examples"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
