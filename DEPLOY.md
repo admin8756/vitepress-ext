@@ -61,7 +61,7 @@ import {
   GLBLoad,
   BBCode,
   ToSpeech
-} from 'vitepress-leelaa-ext'
+} from '@leelaa/vitepress-plugin-extended'
 
 export default {
   extends: DefaultTheme,
