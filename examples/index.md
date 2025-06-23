@@ -3,7 +3,7 @@ layout: home
 hero:
   name: "VitePress Plugin Ext"
   text: "增强 VitePress 的功能与用户体验"
-  tagline: 将 VitePress 变成的更强大，只需几分钟
+  tagline: 将 VitePress 变的更强大，只需几分钟
   image:
     src: https://vitepress-ext.leelaa.cn/vitepress-logo-large.svg
     alt: VitePress
