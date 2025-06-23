@@ -24,7 +24,7 @@ pnpm publish
 在你的 VitePress 项目中:
 
 ```bash
-pnpm add vitepress-leelaa-ext
+pnpm add @leelaa/vitepress-plugin-extended
 ```
 
 配置 `.vitepress/config.ts`:
@@ -35,7 +35,7 @@ import {
     BBCodePlugin,
     MarkMapPlugin,
     MermaidPlugin
-} from 'vitepress-leelaa-ext'
+} from '@leelaa/vitepress-plugin-extended'
 
 export default defineConfig({
   markdown: {
