@@ -163,16 +163,20 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick, watch, onUnmounted } from "vue";
 import * as d3 from "d3";
-import { downloadFunc } from "../utils";
 
-// Props
-interface Props {
-  content?: string;
-  height?: string;
-  theme?: "light" | "dark";
-}
+const downloadFunc = (url: string, name: string) => {
+  if (document) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = name;
+    link.click();
+    URL.revokeObjectURL(url);
+  } else {
+    console.log("未知环境");
+  }
+};
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<MarkMapConfig>(), {
   content: "",
   height: "600px",
   theme: "light",
@@ -526,13 +530,13 @@ onUnmounted(() => {
 .dark .toolbar {
   background: #1d1d1d !important;
 }
-.dark .control-group{
+.dark .control-group {
   background-color: #000 !important;
 }
-.dark .toolbar .tab-button.active{
+.dark .toolbar .tab-button.active {
   background-color: #dbeafe80 !important;
 }
-.dark .toolbar .tab-button:hover{
+.dark .toolbar .tab-button:hover {
   background-color: #9299a380 !important;
   color: white;
 }

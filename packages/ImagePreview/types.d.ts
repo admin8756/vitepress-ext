@@ -4,7 +4,7 @@ interface ImageItem {
   title?: string;
 }
 
-interface Props {
+interface ImagePreviewConfig {
   images?: ImageItem[];
   height?: string;
 }

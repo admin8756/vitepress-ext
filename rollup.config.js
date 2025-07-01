@@ -8,7 +8,9 @@ import postcss from "rollup-plugin-postcss";
 import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import updateDoc from "./plugin/updateDoc.js";
-import updateIndex from "./plugin/updateIndex.js";
+import alias from "@rollup/plugin-alias";
+import typescript from "@rollup/plugin-typescript";
+import { dts } from "rollup-plugin-dts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,23 +42,36 @@ export default defineConfig({
     format: "esm",
     sourcemap: false,
   },
-   build: {
+  build: {
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          if (id.includes("node_modules")) {
+            return id
+              .toString()
+              .split("node_modules/")[1]
+              .split("/")[0]
+              .toString();
           }
-        }
-      }
-    }
+        },
+      },
+    },
   },
   plugins: [
+    typescript({
+      tsconfig: "./tsconfig.json",
+      exclude: "node_modules/**",
+    }),
+    alias({
+      entries: [
+        { find: "@", replacement: path.resolve(__dirname, "packages") },
+      ],
+    }),
+    dts(),
     vue(),
     nodeResolve(),
     commonjs(),
     updateDoc(),
-    updateIndex(),
     postcss({ extensions: [".css"], extract: false }),
     esbuild({
       target: "esnext",

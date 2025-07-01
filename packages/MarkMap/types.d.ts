@@ -1,7 +1,7 @@
 /**
- * ToSpeech 配置选项
+ * MarkMap 配置选项
  */
-export interface ToSpeechConfig {
+interface MarkMapConfig {
   /**
    * 组件内容
    * @default ''
@@ -16,4 +16,5 @@ export interface ToSpeechConfig {
    * 容器高度
    * @default '300px'
    */
+  height?: string;
 }

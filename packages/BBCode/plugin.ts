@@ -1,4 +1,4 @@
-export function BBCodePlugin(md: { renderer: { rules: { fence: { (tokens: any, idx: any, options: any, env: any, self: any): any; bind?: any; }; }; }; }) {
+export default function BBCodePlugin(md: { renderer: { rules: { fence: { (tokens: any, idx: any, options: any, env: any, self: any): any; bind?: any; }; }; }; }) {
   const fence = md.renderer.rules.fence.bind(md.renderer.rules);
 
   md.renderer.rules.fence = (tokens, idx, options, env, self) => {

@@ -28,18 +28,7 @@
 <script setup lang="ts">
 import { ref, computed, onUnmounted, watch } from "vue";
 
-interface Props {
-  // 要合成的文本
-  text: string;
-  // 播放速度
-  rate?: number;
-  // 音量
-  volume?: number;
-  // 自动播放
-  autoplay?: boolean;
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ToSpeechConfig>(), {
   rate: 1.0,
   volume: 1.0,
   autoplay: false,

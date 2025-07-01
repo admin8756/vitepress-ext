@@ -188,19 +188,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-// Props 定义
-interface ModelItem {
-  url: string;
-  title?: string;
-}
-
-interface Props {
-  model?: ModelItem;
-  height?: string;
-  enableMouseZoom?: boolean;
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<GLBLoadConfig>(), {
   height: "600px",
   enableMouseZoom: false,
 });

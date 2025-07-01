@@ -173,19 +173,24 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick, watch, onUnmounted } from "vue";
 import mermaid from "mermaid";
-import { downloadFunc } from "../utils";
 
-// Props
-interface Props {
-  content?: string;
-  height?: string;
-  theme?: "default" | "forest" | "dark" | "neutral";
-}
+const downloadFunc = (url: string, name: string) => {
+  if (document) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = name;
+    link.click();
+    URL.revokeObjectURL(url);
+  } else {
+    console.log("未知环境");
+  }
+};
 
-const props = withDefaults(defineProps<Props>(), {
+
+const props = withDefaults(defineProps<MermaidConfig>(), {
   content: "",
   height: "600px",
-  theme: "default",
+  theme: "light",
 });
 
 // 生成唯一的组件ID，避免多个组件实例冲突
@@ -431,13 +436,13 @@ onUnmounted(() => {
 .dark .toolbar {
   background: #1d1d1d !important;
 }
-.dark .control-group{
+.dark .control-group {
   background-color: #000 !important;
 }
-.dark .toolbar .tab-button.active{
+.dark .toolbar .tab-button.active {
   background-color: #dbeafe80 !important;
 }
-.dark .toolbar .tab-button:hover{
+.dark .toolbar .tab-button:hover {
   background-color: #9299a380 !important;
   color: white;
 }

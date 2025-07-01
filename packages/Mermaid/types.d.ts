@@ -1,7 +1,7 @@
 /**
- * MarkMap 配置选项
+ * Mermaid 配置选项
  */
-export interface MarkMapConfig {
+interface MermaidConfig {
   /**
    * 组件内容
    * @default ''

@@ -157,18 +157,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
-// Props
-interface ImageItem {
-  url: string;
-  title?: string;
-}
 
-interface Props {
-  images?: ImageItem[];
-  height?: string;
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ImagePreviewConfig>(), {
   images: () => [],
   height: "600px",
 });

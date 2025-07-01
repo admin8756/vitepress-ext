@@ -5,15 +5,15 @@
     "module": "ESNext",
     "declaration": true,
     "declarationDir": "./dist",
-    "emitDeclarationOnly": true,
     "moduleResolution": "Bundler",
     "outDir": "./dist",
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": ".",
+    "allowJs": true,
     "paths": {
-      "@leelaa-ext/*": [
+      "@/*": [
         "packages/*"
       ]
     },

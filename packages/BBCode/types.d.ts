@@ -1,7 +1,7 @@
 /**
  * BBCode 编辑器和预览器的配置选项
  */
-export interface BBCodeConfig {
+interface BBCodeConfig {
   /**
    * 组件内容
    * @default ''

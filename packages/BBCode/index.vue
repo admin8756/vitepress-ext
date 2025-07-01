@@ -129,17 +129,20 @@
 </template>
 
 <script setup lang="ts">
-import { downloadFunc } from "../utils";
 import { ref, computed } from "vue";
 
-// Props
-interface Props {
-  content?: string;
-  height?: string;
-  theme?: "light" | "dark";
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const downloadFunc = (url: string, name: string) => {
+  if (document) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = name;
+    link.click();
+    URL.revokeObjectURL(url);
+  } else {
+    console.log("未知环境");
+  }
+};
+const props = withDefaults(defineProps<BBCodeConfig>(), {
   content: "",
   height: "600px",
   theme: "light",
@@ -335,10 +338,10 @@ const exitFullscreen = () => {
 .dark .control-group {
   background-color: #000 !important;
 }
-.dark .toolbar .tab-button.active{
+.dark .toolbar .tab-button.active {
   background-color: #dbeafe80 !important;
 }
-.dark .toolbar .tab-button:hover{
+.dark .toolbar .tab-button:hover {
   background-color: #9299a380 !important;
   color: white;
 }
